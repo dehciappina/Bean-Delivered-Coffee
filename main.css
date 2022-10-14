@@ -139,7 +139,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     font-size: clamp(2.5rem, 9vw, 5rem);
   } .intro_sec .hero_txt a {
     background: var(--dark);
-    padding: 0.8rem 1.4rem 1.2rem;
+    padding: 0.9rem 1.4rem 1rem;
     font-size: clamp(1.5rem, 3vw, 1.6rem);
     border-radius: 0.4rem;
     color: var(--light);
@@ -149,14 +149,14 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     font-size: clamp(2.5rem, 10vw, 5rem);
     font-weight: 600;
     line-height: 1.15;
-    margin: clamp(1.3rem, 4vw, 2rem) 0;
+    margin: clamp(1.3rem, 6vw, 3rem) 0 clamp(1.3rem, 3vw, 2rem);
     letter-spacing: -0.1rem;
     text-shadow: 0.15rem 0.15rem 0rem var(--colorB2);
   } .intro_sec h2 {
     font-weight: 400;
     line-height: 1.4;
-    font-size: clamp(0.5rem, 4.1vw, 5rem);
-    letter-spacing: 0.2px;
+    font-size: clamp(0.5rem, 3.9vw, 1.9rem);
+    letter-spacing: 0.5px;
   } .intro_sec .hero_div {
     background-image: url(assets/bg1.png), linear-gradient(30deg, #503935, #0000 38%);
     background-color: var(--dark);
@@ -202,28 +202,27 @@ footer {
 
 
 .catalog_sec {
-  padding: 10rem 0;
+  padding: 6rem 0 0;
 } .catalog_sec h2 {
   text-align: left;
   color: var(--light);
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
   font-weight: 200;
-  margin-bottom: 0rem;
   letter-spacing: 0.1rem;
 } .catalog {
-  padding: 3rem;
+  padding: clamp(1.2rem, 5vw, 2.5rem) 3rem clamp(1.2rem, 12vw, 5rem) clamp(2rem, 7vw, 6rem);
   display: flex;
   overflow-x: scroll;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: x mandatory;
   gap: 2rem;
+} .catalog::-webkit-scrollbar-track {
+  background-color:var(--colorB1);
 } .catalog article {
   scroll-snap-align: center;
-  display: inline-block;
-  height: 50vh;
   border-radius: 1rem;
   background-color: var(--dark);
   width: 50rem;
-  min-width: clamp(25rem, 81vw, 35rem);
+  min-width: clamp(21rem, 62vw, 28rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -231,36 +230,37 @@ footer {
   gap: 1rem;
   color: var(--light);
   text-align: center;
-  padding: 0 3rem;
+  padding: 4rem clamp(1rem, 6vw, 3rem) 3rem;
   box-sizing: border-box;
   position: relative;
 } .catalog h3 {
-  font-size: 2.8rem;
+  font-size: clamp(2rem, 5.5vw, 2.8rem);
   font-weight: 400;
 } .catalog article p {
   font-weight: 100;
-  font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+  font-size: clamp(1.1rem, 3.3vw, 1.4rem);
   line-height: 1.4;
   letter-spacing: 1px;
 } .catalog .product_img {
-  background-image: url(assets/bean-delivered-product.png);
-  background-size: contain;
-  background-position: center bottom;
-  background-repeat: no-repeat;
   width: 100%;
-  height: clamp(15rem, 40vw, 25rem);
+  height: clamp(15rem, 40vw, 18rem);
+  object-fit: contain;
+} .catalog .price {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 200;
+  letter-spacing: 0.1rem;
 }
 
 
 .catalog .add_bt, .catalog .subtract_bt {
-  width: 6rem;
+  width: 3.5rem;
   height: 3.5rem;
   text-align: center;
-  border-radius: 0.9rem;
+  border-radius: 3rem;
   margin-top: 1rem;
   box-sizing: border-box;
   background-repeat: no-repeat;
-  background-size: 2rem;
+  background-size: 38%;
   background-position: center;
 } .catalog .add_bt {
   background-color: var(--light);
