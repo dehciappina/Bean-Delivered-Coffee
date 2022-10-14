@@ -6,25 +6,25 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   @font-face {
     font-family: "Balgin";
     font-weight: 100;
-    src: url("assets/fonts/balgindisplay-extralight.otf");
+    src: url("assets/fonts/balgindisplay-extralight.ttf");
   }
   
   @font-face {
     font-family: "Balgin";
     font-weight: 200;
-    src: url("assets/fonts/balgindisplay-light.otf");
+    src: url("assets/fonts/balgindisplay-light.ttf");
   }
   
   @font-face {
     font-family: "Balgin";
     font-weight: 400;
-    src: url("assets/fonts/balgindisplay-regular.otf");
+    src: url("assets/fonts/balgindisplay-regular.ttf");
   }
   
   @font-face {
     font-family: "Balgin";
     font-weight: 600;
-    src: url("assets/fonts/balgindisplay-medium.otf");
+    src: url("assets/fonts/balgindisplay-medium.ttf");
   }  
 
   :root {
@@ -127,8 +127,8 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     /* background-image: linear-gradient(180deg, #131313, #0000 38%); */
     background-color: var(--colorB1);
   } .intro_sec .logo_stamp {
-    width: clamp(3.6rem, 20vw, 13rem);
-    height: clamp(3.6rem, 20vw, 13rem);
+    width: clamp(3.6rem, 24vw, 13rem);
+    height: clamp(3.6rem, 24vw, 13rem);
     background-image: url(assets/sticker1_big.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -146,16 +146,16 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
     letter-spacing: 1px;
   } h1 {
-    font-size: clamp(2.5rem, 9.5vw, 5rem);
+    font-size: clamp(2.5rem, 10vw, 5rem);
     font-weight: 600;
     line-height: 1.15;
     margin: clamp(1.3rem, 4vw, 2rem) 0;
-    width: 98%;
+    letter-spacing: -0.1rem;
     text-shadow: 0.15rem 0.15rem 0rem var(--colorB2);
   } .intro_sec h2 {
     font-weight: 400;
     line-height: 1.4;
-    font-size: 0.4em;
+    font-size: clamp(0.5rem, 4.1vw, 5rem);
     letter-spacing: 0.2px;
   } .intro_sec .hero_div {
     background-image: url(assets/bg1.png), linear-gradient(30deg, #503935, #0000 38%);
@@ -195,7 +195,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
 
 footer {
   height:30rem;
-  background-color: var(--light);
+  background-color: var(--colorB1);
 }
 
 
@@ -204,12 +204,12 @@ footer {
 .catalog_sec {
   padding: 10rem 0;
 } .catalog_sec h2 {
-  text-align: center;
-  color: var(--colorB1);
-  font-size: 4rem;
-  font-weight: 400;
-  margin-bottom: 4rem;
-  text-shadow: 0.15rem 0.15rem 0rem #0006;
+  text-align: left;
+  color: var(--light);
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-bottom: 0rem;
+  letter-spacing: 0.1rem;
 } .catalog {
   padding: 3rem;
   display: flex;
@@ -224,9 +224,62 @@ footer {
   background-color: var(--dark);
   width: 50rem;
   min-width: clamp(25rem, 81vw, 35rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--light);
+  text-align: center;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  position: relative;
+} .catalog h3 {
+  font-size: 2.8rem;
+  font-weight: 400;
+} .catalog article p {
+  font-weight: 100;
+  font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+  line-height: 1.4;
+  letter-spacing: 1px;
+} .catalog .product_img {
+  background-image: url(assets/bean-delivered-product.png);
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: clamp(15rem, 40vw, 25rem);
 }
 
 
+.catalog .add_bt, .catalog .subtract_bt {
+  width: 6rem;
+  height: 3.5rem;
+  text-align: center;
+  border-radius: 0.9rem;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: center;
+} .catalog .add_bt {
+  background-color: var(--light);
+  color: var(--dark);
+  background-image: url(assets/plus.svg);
+} .catalog .subtract_bt {
+  background-color: var(--colorA1);
+  color: var(--light);
+  background-image: url(assets/minus.svg);
+}
+
+.operator {
+  display: flex;
+  gap:1rem;
+  justify-content: center;
+  align-items: center;
+} .operator .quantity {
+  font-size: 1.6rem;
+}
 
 
 
@@ -278,7 +331,6 @@ footer {
     width: clamp(20rem, calc(62vw - 10rem), 62vw);
     height: 88vh;
     border-radius: 0 0 0 10rem;
-    border-left: 0.2rem solid var(--colorB2);
   } .intro_sec .hero_txt {
     width: clamp(30rem, 32vw, 47rem);
     margin: unset;
