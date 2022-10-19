@@ -44,7 +44,11 @@
 
                 </div>
 
-                <img class="sticker" src="assets/sticker1_big.png" alt="BD Coffee sticker art">
+                <picture class="sticker" loading="lazy" draggable="false">
+                    <source srcset="assets/sticker-dark.webp" type="image/webp">
+                    <source srcset="assets/sticker-dark.png" type="image/png"> 
+                    <img src="assets/sticker-dark.png" alt="BD Coffee sticker art">
+                </picture>
             </section>
     
             <section class="catalog_sec" id="catalog">
@@ -52,7 +56,13 @@
     
                 <div class="catalog">
                     <article>
-                        <img class="product_img" src="assets/bean-delivered-product.png" alt="product photo" loading="lazy">
+                        <picture class="product_img" loading="lazy" draggable="false">
+                            <source srcset="assets/bean-delivered-product.webp" type="image/webp">
+                            <source srcset="assets/bean-delivered-product.png" type="image/png"> 
+                            <img src="assets/bean-delivered-product.png" alt="Product image">
+                        </picture>
+
+
                         <h3>Lorem Ipsum</h3>
                         <p>Dolor sit, amet consectetur adipisicing elit. Illum delectus, velit voluptate dolorum.</p>
     
@@ -211,17 +221,17 @@
                 <div class="flex">
                     <div class="items_ctnr">
                         <div class="item">
-                            <span class="title">Lorem ipsum</span>
+                            <span class="title">Premium coffee pack</span>
                             <div class="divider"></div>
                             <span class="quantity">x1</span>
                         </div>
                         <div class="item">
-                            <span>Dolor sit amet</span>
+                            <span>Regular coffee</span>
                             <div class="divider"></div>
                             <span class="quantity">x3</span>
                         </div>
                         <div class="item">
-                            <span>Consecteur elit</span>
+                            <span>BD Coffee® cups</span>
                             <div class="divider"></div>
                             <span class="quantity">x2</span>
                         </div>
@@ -232,11 +242,12 @@
                             <span class="title">Subtotal</span>
                             <span class="subtotal_price">£60</span>
                         </div>
+
                         <div class="divider"></div>
 
                         <div class="item">
                             <span class="title">Delivery fee</span>
-                            <span class="subtotal_price">£2.50</span>
+                            <span class="subtotal_price">£3.50</span>
                         </div>
 
                         <div class="zip_ctnr">
@@ -244,6 +255,15 @@
 
                             <button type="submit">update</button>
                         </div>
+                        
+                        <div class="divider"></div>
+
+                        <div class="item">
+                            <span class="title">Total</span>
+                            <span class="subtotal_price">£63.50</span>
+                        </div>
+
+                        <div class="pay_cta" role="button">Payment options</div>
                     </div>
                 </div>
             </div>
@@ -252,6 +272,7 @@
 
     <footer>
 
+        <span class="disclaimer">Bean Delivered Coffee® 2022.<br/>All Rights Reserved.</span>
     </footer>
 </body>
 </html>
