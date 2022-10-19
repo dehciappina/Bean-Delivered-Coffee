@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./main.css">
     <script src="./main.js" defer></script>
     <script src="./cart.js" defer></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -30,18 +32,19 @@
 
         <div>
             <div class="cart_cta">
-                <a href="#shopping-cart">
-                    <span>Your cart (0)</span>
+                <a href="#cart">
+                    <span>Your cart (6)</span>
                 </a>
             </div>
 
             <section class="big_title_sec">
                 <h2 class="title">Fresh barista coffee delivered to you.</h2>
+                
+                <div class="brand_bullets">
+
+                </div>
+
                 <img class="sticker" src="assets/sticker1_big.png" alt="BD Coffee sticker art">
-            </section>
-
-            <section class="hero1">
-
             </section>
     
             <section class="catalog_sec" id="catalog">
@@ -92,7 +95,7 @@
                     
                     <article class="popular">
                         <img class="product_img" src="assets/bean-delivered-product.png" alt="product photo" loading="lazy">
-                        <h3>Consecteur elit amen illum</h3>
+                        <h3>Consecteur elit</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus molestiae.</p>
     
                         <span class="price">15£</span>
@@ -113,7 +116,7 @@
                     
                     <article>
                         <img class="product_img" src="assets/bean-delivered-product.png" alt="product photo" loading="lazy">
-                        <h3>Consecteur elit amen illum</h3>
+                        <h3>Adipisicing Elit</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus molestiae.</p>
     
                         <span class="price">15£</span>
@@ -134,7 +137,7 @@
                     
                     <article>
                         <img class="product_img" src="assets/bean-delivered-product.png" alt="product photo" loading="lazy">
-                        <h3>Consecteur elit amen illum</h3>
+                        <h3>Accusamus molestiae</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus molestiae.</p>
     
                         <span class="price">15£</span>
@@ -201,9 +204,48 @@
 
         
 
-        <section class="cart_sec" id="shopping-cart">
+        <section class="cart_sec" id="cart">
             <div class="main_width">
-                <h3>Your Shopping Cart</h3>
+                <h2>Shopping Cart</h2>
+
+                <div class="flex">
+                    <div class="items_ctnr">
+                        <div class="item">
+                            <span class="title">Lorem ipsum</span>
+                            <div class="divider"></div>
+                            <span class="quantity">x1</span>
+                        </div>
+                        <div class="item">
+                            <span>Dolor sit amet</span>
+                            <div class="divider"></div>
+                            <span class="quantity">x3</span>
+                        </div>
+                        <div class="item">
+                            <span>Consecteur elit</span>
+                            <div class="divider"></div>
+                            <span class="quantity">x2</span>
+                        </div>
+                    </div>
+
+                    <div class="summary_ctnr">
+                        <div class="item">
+                            <span class="title">Subtotal</span>
+                            <span class="subtotal_price">£60</span>
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="item">
+                            <span class="title">Delivery fee</span>
+                            <span class="subtotal_price">£2.50</span>
+                        </div>
+
+                        <div class="zip_ctnr">
+                            <input placeholder="Postal Code" class="postal_code" id="zip" name="zip" type="text" inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$">
+
+                            <button type="submit">update</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
