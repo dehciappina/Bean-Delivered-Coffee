@@ -32,11 +32,11 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
 
     --colorB1:#151515;
     --colorB2:#1f1f1f;
-    --colorB3:#252525;
+    --colorB3:#222;
 
-    --colorD1:#bf6443;
-    --colorD2:#d87;
-    --colorD3:#ffcbc0;
+    --colorC1: #db6842;
+    --colorC2:#d87;
+    --colorC3:#ffcbc0;
   }
   
   html {
@@ -90,7 +90,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   }
 
   .main_width {
-    width: clamp(10rem, 78vw, 100rem);
+    width: clamp(10rem, 78vw, 91rem);
     margin:0 auto;
   }
 
@@ -108,7 +108,6 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
 
   .cart_cta {
     width: 100%;
-    height: 5.5rem;
     position: sticky;
     top: 2rem;
     z-index: 9;
@@ -125,8 +124,8 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.1rem;
     color: var(--colorA1);
     font-weight: 200;
-    border: 0.15rem solid var(--colorD2);
-    background-color: var(--colorD1);
+    border: 0.15rem solid var(--colorC2);
+    background-color: var(--colorC1);
     font-weight: 200;
     border-radius: 0.3rem;
     width: 90%;
@@ -134,7 +133,6 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0.6rem 1rem -0.6rem var(--colorB1);
   }
 
-  
 
   .intro_sec {
     /* background-image: linear-gradient(180deg, #131313, #0000 38%); */
@@ -148,33 +146,38 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     background-size: contain;
   } .intro_sec .txt {
     color: var(--colorB1);
-    background-color: var(--colorD1);
+    background-color: var(--colorC1);
     font-size: clamp(2.5rem, 9vw, 5rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: clamp(36rem, 120vw, 59rem);
+    height: clamp(36rem, 118vw, 59rem);
   } .intro_sec .txt .ctnr {
     width: clamp(23rem, 85vw, 62rem);
+    transform: translateY(-1rem);
   } .intro_sec .txt a {
     background: var(--colorB1);
-    padding: clamp(0.3rem, 3vw, 0.9rem) 1.4rem clamp(0.3rem, 3vw, 1rem);
-    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    padding: 0 1.4rem 0;
+    font-size: clamp(0.8rem, 4vw, 1.4rem);
     border-radius: 0.4rem;
     color: var(--colorA1);
     font-weight: 200;
     letter-spacing: 1px;
     display: block;
     width: max-content;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(3rem, 12vw, 4.5rem);
   } h1 {
     font-size: clamp(2.5rem, 10vw, 5.3rem);
     font-weight: 600;
     line-height: 1.15;
     margin: clamp(1.3rem, 4vw, 3rem) 0 clamp(1.3rem, 3vw, 2rem);
     letter-spacing: -0.1rem;
-    text-shadow: 0.15rem 0.15rem 0rem var(--colorD2);
+    text-shadow: 0.15rem 0.15rem 0rem var(--colorC2);
   } .intro_sec h2 {
     font-weight: 600;
     line-height: 1.4;
@@ -189,6 +192,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
     position: relative;
   } .intro_sec .showoff .img {
     background-image: url(assets/bean-delivered-product.png);
+    background-image: -webkit-image-set(url(assets/bean-delivered-product.png) 1x, url(assets/bean-delivered-product.webp) 1x);
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -211,28 +215,53 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   color: var(--colorA1);
   background-color: var(--colorB1);
-  height: clamp(33rem, 50vw, 45rem);
-  text-align: center;
-  padding: 0 1rem 10rem;
+  padding: clamp(5rem, 18vw, 8rem) 0rem clamp(13rem, 35vw, 20rem);
+  gap: 2.5rem;
   box-sizing: border-box;
 } .big_title_sec .title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 400;
   letter-spacing: 0.1rem;
   max-width: 70vw;
+  text-align: center;
 } .big_title_sec .sticker {
   position: absolute;
   bottom: 0;
-  transform: translateY(50%);
-  width: clamp(11rem, 33vw, 22rem);
+  transform: translateY(53%);
+  width: clamp(11rem, 28vw, 16rem);
+}
+
+.brand_bullets {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+} .brand_bullets .divider {
+  width:100%;
+  height: 0.1rem;
+  background-color:var(--colorB3);
+} .bullet {
+  display: flex;
+  gap: clamp(1.3rem, 5vw, 2rem);
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 85vw;
+} .bullet img {
+  width: clamp(1.5rem, 6vw, 2rem);
+  height: clamp(1.5rem, 6vw, 2rem);
+} .bullet p {
+  color: var(--colorA1);
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  font-size: clamp(1.1rem, 3.5vw, 1.2rem);
+  text-align: left;
 }
 
 
 
-
-
 .catalog_sec {
-  padding: 16rem 0 0;
+  padding: clamp(8rem, 22vw, 13rem) 0 0;
   background-color: var(--colorB3);
 } .catalog_sec h2, .cart_sec h2 {
   color: var(--colorA1);
@@ -240,7 +269,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   letter-spacing: 0.1rem;
 } .catalog_sec h2 {
-  text-align: center;
+  padding-left: clamp(2rem, 7vw, 6rem);
 } .catalog {
   padding: clamp(1.2rem, 5vw, 2.5rem) 3rem clamp(1.2rem, 12vw, 5rem) clamp(2rem, 7vw, 6rem);
   display: flex;
@@ -250,7 +279,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
 } .catalog::-webkit-scrollbar-track {
   background-color:var(--colorB2);
 } .catalog::-webkit-scrollbar-thumb {
-  background-color:var(--colorD1);
+  background-color:var(--colorC1);
 } .catalog article {
   scroll-snap-align: center;
   border-radius: 1rem;
@@ -265,7 +294,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   gap: 1rem;
   color: var(--colorA1);
   text-align: center;
-  padding: 4rem clamp(1rem, 6vw, 3rem) 3rem;
+  padding: 3rem clamp(1rem, 6vw, 3rem) 2rem;
   box-sizing: border-box;
   position: relative;
   transition: background-color 0.5s ease;
@@ -277,7 +306,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0.9rem;
   top: 0.9rem;
-  background-color: var(--colorD1);
+  background-color: var(--colorC1);
   color: var(--colorA1);
   padding: 0.2rem 0.7rem;
   font-size: clamp(1.2rem, 4vw, 1.3rem);
@@ -320,7 +349,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 } .add_bt:hover {
   border: 0.15rem solid;
-  border-color: var(--colorD2);
+  border-color: var(--colorC2);
   background-color: var(--colorB1);
   transition: background-color 0.15s ease, border-color 0.15s ease;
 } .subtract_bt:hover {
@@ -362,7 +391,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
 
 .cart_sec {
   background-color: var(--colorB1);
-  padding: 12rem 0 14rem;
+  padding: clamp(8rem, 30vw, 14rem) 0 clamp(8rem, 30vw, 16rem);
 } .cart_sec .main_width {
 
 } .cart_sec .flex {
@@ -389,14 +418,12 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   gap: 1.6rem;
 } .item .divider {
   flex: 1;
+} .item.total {
+  color:var(--colorC3)
 } .summary_ctnr {
   font-size: clamp(1.6rem, 5vw, 2.2rem);
-} .summary_ctnr .item {
-    
-} .summary_item {
-  
-} .summary_item .title {
-  padding: 0.8rem 0;
+} .summary_ctnr .divider {
+  margin:1rem 0;
 } .cart_sec .divider {
   width:100%;
   height:0.1rem;
@@ -410,12 +437,13 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   width: 100%;
   font-size: 1.3rem;
+  letter-spacing: 0.1rem;
 } .zip_ctnr {
   display: flex;
   gap: 1rem;
 } .zip_ctnr button {
   background-color: #0000;
-  border: 0.1rem solid var(--colorD2);
+  border: 0.1rem solid var(--colorC2);
   border-radius: 0.3rem;
   font-weight: 200;
   color: var(--colorA1);
@@ -426,7 +454,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
   background-color: var(--colorB2);
 } .pay_cta {
   text-align: center;
-  border: 0.1rem solid var(--colorD2);
+  border: 0.1rem solid var(--colorC2);
   border-radius: 0.3rem;
   font-size: 1.5rem;
   margin-top: 1rem;
@@ -438,7 +466,7 @@ html, body, p, h1, h2, h3, h4, h5, h6 {
 
 footer {
   height: 20rem;
-  background-color: var(--colorD1);
+  background-color: var(--colorC1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,7 +476,7 @@ footer {
   color: var(--colorA1);
   text-align: center;
   display: block;
-  line-height: 1.3;
+  line-height: 1.5;
   letter-spacing: 0.1rem;
 }
 
@@ -473,7 +501,7 @@ footer {
   h1 {
     max-width: 80vw;
     font-size: clamp(2.5rem, 4.5vw, 5.3rem);
-    margin: 1.5rem 0 2rem 0;
+    margin: 2rem 0;
   }
 
   .intro_sec {
@@ -485,7 +513,7 @@ footer {
 
   .cart_cta {
     margin-top: 1rem;
-    top: 20vh;
+    top: 18vh;
   } .cart_cta a {
     width: unset;
     display: inline-flex;
@@ -498,16 +526,17 @@ footer {
 
   .intro_sec .showoff {
     width: clamp(20rem, calc(63vw - 10rem), 62vw);
-    height: 90vh;
+    height: clamp(50rem, 90vh, 100rem);
     border-radius: 0 0 0 8rem;
+    box-shadow: 0rem 0rem 5rem -1.5rem var(--colorB2);
   } .intro_sec .txt {
     flex: 1;
-    height: 80vh;
+    height: clamp(30rem, 80vh, 70rem);
   } .intro_sec .txt .ctnr {
     width: clamp(31rem, 38vw, 46rem);
   } .intro_sec .showoff .img {
     position: absolute;
-    bottom: -12%;
+    bottom: -10%;
     top: unset;
     z-index: 1;
     width: 91%;
@@ -515,6 +544,16 @@ footer {
   } .intro_sec .logo_stamp {
     width: clamp(3.6rem, 12vw, 13rem);
     height: clamp(3.6rem, 12vw, 13rem);
+  }
+
+  .brand_bullets {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  } .brand_bullets .divider {
+    width: 0.1rem;
+    height: 3rem;
   }
 
   .catalog_sec {
@@ -533,7 +572,7 @@ footer {
   } .catalog article p {
     font-size: clamp(1.1rem, 3.3vw, 1.25rem);
   } .catalog_sec h2 {
-    text-align: center;
+    padding-left: 15vw;
   }
 
 
